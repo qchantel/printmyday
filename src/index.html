@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Print My Day</h1>
+            <p>Procrastinate no more by printing receipts.</p>
+        </div>
+
+        <div class="content">
+            <div class="task-form">
+                <input type="text" id="task-input" class="task-input" placeholder="Enter a new task..." maxlength="200">
+                <button id="add-button" class="add-button">Add Task</button>
+            </div>
+
+            <div class="task-count" id="task-count">
+                No tasks yet
+            </div>
+
+            <div class="tasks-container" id="tasks-container">
+                <div class="empty-state">
+                    <h3>No tasks yet</h3>
+                    <p>Add your first task to get started!</p>
+                </div>
+            </div>
+
+            <div class="print-section">
+                <button class="print-button" id="print-button">Print Task List</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="renderer.js"></script>
+
+</html>
